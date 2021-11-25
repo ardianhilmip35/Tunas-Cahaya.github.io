@@ -11,7 +11,7 @@ body {
 /*Landing Page*/
 #home {
   padding-top: 6rem;
-  background-image: url('/img/Beranda.png');
+  background-image: url('img/Beranda.png');
   background-color: #cccccc;
   height: 570px;
   background-repeat: no-repeat;
