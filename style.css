@@ -92,7 +92,25 @@ section {
   letter-spacing: 1px;
 }
 
-.project {
-  text-shadow: 2px 1px #666666;
+.selengkapnya{
+  text-decoration: none;
+  background-color: #1e3163;
+  width: 220px;
+  text-align: center;
+  color: #fff;
+  padding: 10px;
   letter-spacing: 1px;
+  font-size: 20px;
+  margin-top: 40px;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.selengkapnya:active,
+.selengkapnya:hover{
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: 2px;
+  width: 225px;
+  font-weight: 500;
 }
