@@ -10,8 +10,20 @@
 
     <!-- Link CSS -->
     <link rel="stylesheet" href="style.css" />
-    >
 
+    <!-- Style Khusus Login-->
+    <style>
+      *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body{
+        background: #B2DFFB;
+      }
+    </style>
+    
     <title>Tugas Bootstrap</title>
   </head>
   <body>
@@ -33,16 +45,35 @@
     <!-- Akhir Navbar -->
 
     <!-- Halaman Login -->
-    <section class="hlogin">
+    <section class="Form my-4 mx-5">
       <div class="container">
-        <div class="row">
+        <div class="row-login">
           <div class="col-lg-5">
-            <img src="img/Beranda.png" alt="" class="img-fluid" />
+            <img src="img/1.png" alt="" class="img-fluid" />
           </div>
         </div>
         <div class="col-lg-7">
-          <form action="">
-            
+          <form>
+            <div class="form-row">
+              <div class="col-lg-7">
+                <input type="email" placeholder="Masukkan Email Anda" class="form-control">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col-lg-7">
+                <input type="password" placeholder="Masukkan Password Anda" class="form-control">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col-lg-7">
+                <input type="checkbox" class="btn1">Remember Me</input>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col-lg-7">
+                <button type="button" class="btn1">LOGIN</button>
+              </div>
+            </div>
           </form>
         </div>
       </div>
