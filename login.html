@@ -11,32 +11,22 @@
     <!-- Link CSS -->
     <link rel="stylesheet" href="style.css" />
 
-    <!-- Style Khusus Login-->
-    <style>
-      *{
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-      }
+    <!-- Tempat Font Awesome-->
+    <link href="/fontawesome-free-5.15.4-web/css/all.css" rel="stylesheet" />
 
-      body{
-        background: #B2DFFB;
-      }
-    </style>
-    
-    <title>Tugas Bootstrap</title>
+    <title>Landing Page | Tunas Cahaya Website</title>
   </head>
   <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top shadow-sm display-6" style="background-color: #1e3163">
+    <nav class="navbar navbar-expand-lg fixed-top shadow-sm" style="background-color: #1e3163">
       <div class="container-fluid">
-        <img src="img/Logo.png" alt="" width="69px" class="d-inline-block align-text-top ps-2" style="padding-bottom: 4px; padding-top: 0.5px" />
+        <img src="img/Logo.png" alt="" width="85px" class="d-inline-block align-text-top pe-3 ps-2 mb-1" />
         <div class="navbar-nav me-auto">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link fs-5 fw-bold" aria-current="page" href="#" style="text-decoration: none; color: #fff; padding-left: 10px">CV TUNAS CAHAYA</a>
+              <a class="nav-link" aria-current="page" href="#" style="text-decoration: none; font-size: 20px; margin-left: -12px; color: #fff; font-weight: 600; letter-spacing: 1px;">CV TUNAS CAHAYA</a>
             </li>
           </ul>
         </div>
@@ -44,40 +34,16 @@
     </nav>
     <!-- Akhir Navbar -->
 
-    <!-- Halaman Login -->
-    <section class="Form my-4 mx-5">
-      <div class="container">
-        <div class="row-login">
-          <div class="col-lg-5">
-            <img src="img/1.png" alt="" class="img-fluid" />
-          </div>
-        </div>
-        <div class="col-lg-7">
-          <form>
-            <div class="form-row">
-              <div class="col-lg-7">
-                <input type="email" placeholder="Masukkan Email Anda" class="form-control">
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="col-lg-7">
-                <input type="password" placeholder="Masukkan Password Anda" class="form-control">
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="col-lg-7">
-                <input type="checkbox" class="btn1">Remember Me</input>
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="col-lg-7">
-                <button type="button" class="btn1">LOGIN</button>
-              </div>
-            </div>
-          </form>
+    <!-- Login-->
+    <section id="home" class="text-center">
+      <div class="hero-image">
+        <div class="hero-text">
+          <h1 class="display-4 fw-bold pt-2" style="color: #000; font-size: 65px">CV TUNAS CAHAYA</h1>
+          <h3 class="lead fs-4 fw-normal" style="color: #000">Bangun rumah impian anda bersama kami</h3>
+          <button class="lead download">DOWNLOAD</button>
         </div>
       </div>
     </section>
-    <!-- Akhir Halaman Login -->
+    <!-- Akhir Login -->
   </body>
 </html>

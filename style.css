@@ -13,12 +13,11 @@ body {
   padding-top: 6rem;
   background-image: url('img/Beranda.png');
   background-color: #cccccc;
-  height: 570px;
+  height: 700px;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
 }
-
 
 .hero-text {
   text-align: center;
@@ -140,7 +139,7 @@ footer {
   flex-wrap: wrap;
 }
 
-.items .logo {
+.items .logolp {
   text-transform: capitalize;
   font-size: 20px;
   font-weight: bold;
@@ -160,7 +159,5 @@ hr {
 /*Akhir Landing page*/
 
 /*Halaman Login*/
-.row-login{
-  
-}
+
 /*Akhir Halaman Login*/
