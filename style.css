@@ -159,5 +159,24 @@ hr {
 /*Akhir Landing page*/
 
 /*Halaman Login*/
-
+#login {
+  padding-top: 6rem;
+  background-image: url('img/Beranda.png');
+  background-color: #cccccc;
+  width: 50%;
+  height: 100%;
+  background-size: cover;
+  position: absolute;
+}
+.hero-text {
+  text-align: center;
+  position: relative;
+  transform: translate(-50%,25%);
+  color: white;
+}
+#form{
+  height: 100%;
+  width:40%;
+  transform: translate(132%, 50%);
+}
 /*Akhir Halaman Login*/
