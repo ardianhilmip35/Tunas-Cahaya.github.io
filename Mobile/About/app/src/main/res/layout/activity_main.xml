@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/purple">
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/kembali"
+        android:src="@drawable/vector"
+        android:clickable="true"
+        android:background="@color/purple"
+        android:layout_marginLeft="20dp"
+        android:layout_gravity="center"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:text="ABOUT"
+        android:fontFamily="@font/poppins"
+        android:textStyle="bold"
+        android:textColor="@color/purple"
+        android:textSize="24dp"
+        android:textAlignment="center"/>
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="500dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:background="@color/purple"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingTop="20dp"
+            android:paddingRight="20dp"
+            android:fontFamily="@font/ptserif"
+            android:text="CV. TUNAS CAHAYA adalah perusahaan Pelaksanaan konstruksi berbentuk CV. CV. TUNAS CAHAYA beralamat di Jl. Slamet Riyadi RT. 004 RW. 011 Perum Bumi Central Permai Blok C-27 Kel. Baratan Kec. Patrang kabupaten Kab. Jember."
+            android:textColor="@color/white"
+            android:justificationMode="inter_word"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingTop="20dp"
+            android:paddingRight="20dp"
+            android:fontFamily="@font/ptserif"
+            android:text="CV. TUNAS CAHAYA adalah badan usaha berpengalaman yang mengerjakan proyek nasional. CV. TUNAS CAHAYA saat ini memiliki kualifikasi . CV. TUNAS CAHAYA dapat mengerjakan proyek-proyek dengan sub klasifikasi:
+BG007 Jasa Pelaksana Untuk Konstruksi Bangunan Pendidikan
+BG009 Jasa Pelaksana Untuk Konstruksi Bangunan Gedung Lainnya
+SI001 Jasa Pelaksana Untuk Konstruksi Saluran Air, Pelabuhan, Dam, dan Prasarana Sumber Daya Air Lainnya
+SI003 Jasa Pelaksana Untuk Konstruksi Jalan Raya (kecuali jalan layang), jalan, rel kereta api, dan landas pacu bandara"
+            android:textColor="@color/white"
+            android:justificationMode="inter_word"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
