@@ -52,25 +52,7 @@ section {
   font-weight: bold;
 }
 
-.signin {
-  background-color: #fff;
-  color: black;
-  width: 100px;
-  height: 40px;
-  font-weight: bolder;
-  letter-spacing: 2px;
-  border-radius: 20px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  text-decoration: none;
-  border-color: white;
-}
 
-.signin:active {
-  color: black;
-  letter-spacing: 1px;
-  text-decoration: none;
-}
 
 .download {
   background-color: #1e3163;
@@ -168,15 +150,44 @@ hr {
   background-size: cover;
   position: absolute;
 }
-.hero-text {
+.login-text {
   text-align: center;
-  position: relative;
-  transform: translate(-50%,25%);
+  color: white;
+  position: absolute;
+  top: 53%;
+  left: 11%;
+  transform: translate(0%, -50%);
   color: white;
 }
 #form{
   height: 100%;
   width:40%;
-  transform: translate(132%, 50%);
+  transform: translate(137%, 42%);
+}
+.signin {
+  background-color: #1e3163;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 500;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  transform: translate(52%, 40%);
+  width: 300px;
+  border: #1e3163;
+}
+
+.signin:active {
+  color: black;
+  left: 50%;
+  transform: translate(52%, 40%);
+  letter-spacing: 2px;
+  text-align: center;
+  width: 300px;
 }
 /*Akhir Halaman Login*/
