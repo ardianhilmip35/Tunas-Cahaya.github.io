@@ -12,7 +12,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:src="@drawable/back"
-        android:background="@color/material_on_primary_disabled"
+        android:background="@color/admin"
         />
 
 
