@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ardianhilmip.tunascahaya">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Tunas_Cahaya_Mobile">
+        <!--Layout Home-->
+        <activity android:name=".Activites.HomeActivity"
+            android:exported="true"/>
+
+        <!--Layout About-->
+        <activity android:name=".Fitur.AboutActivity"
+            android:exported="true"/>
+
+        <!--Layout Konsul-->
+        <activity android:name=".Fitur.KonsulActivity"
+            android:exported="true"/>
+
+        <!--Layout Akun-->
+        <activity android:name=".Fitur.AkunActivity"
+            android:exported="true"/>
+
+        <!--Layout Edit Akun-->
+        <activity android:name=".Fitur.EditAkunActivity"
+            android:exported="true"/>
+
+        <!--Layout Register-->
+        <activity android:name=".Activites.RegisterActivity"
+            android:exported="true"/>
+
+        <!--Layout Login-->
+        <activity android:name=".Activites.LoginActivity"
+            android:exported="true">
+        </activity>
+
+        <!--Layout  Forgot Password-->
+        <activity android:name=".Fitur.ResetPassActivity"
+            android:exported="true"/>
+        <!--Layout Reset Password-->
+
+        <!--Layout  Katalog-->
+        <activity android:name=".Fitur.KatalogActivity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".SplashScreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
