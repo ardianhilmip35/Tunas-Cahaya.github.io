@@ -149,15 +149,10 @@
                                              <label style="background-color: #1E3163; color: #fff; width: 160px; height: 30px; text-align: center; margin-left: 50px; margin-top: 10px;"><b>NAMA BANGUNAN</b></label>
                                              <input type="text" name="nama_bangunan" placeholder="" style="margin-left: 50px; width: 70%;" value="<?php echo $NamaBangunan; ?>"/>
                                          </p>
-                                         <!-- <p>
-                                             <label style="background-color: #1E3163; color: #fff; width: 160px; height: 30px; text-align: center; margin-left: 50px; margin-top: 10px;"><b>KATEGORI</b></label>
-                                             <input type="text" name="Kategori" placeholder="" style="margin-left: 50px; width: 70%;" value="<?php echo $Kategori; ?>"/>
-                                         </p> -->
                                          <p>
                                              <label style="background-color: #1E3163; color: #fff; width: 160px; height: 30px; text-align: center; margin-left: 50px; margin-top: 10px;"><b>KATEGORI</b></label>
-                                             <!-- <input type="text" name="Kategori" placeholder="" style="margin-left: 50px; width: 70%;" value="<?php echo $Kategori; ?>"/> -->
-                                             <select name="Kategori"  style="margin-left: 50px; width: 70%;">
-											<option value="">--Pilih--</option>
+                                        <select name="Kategori"  style="margin-left: 50px; width: 15%;" value="<?php $Kategori ?>">
+											<option ><?php echo $Kategori?></option>
 											<option value="Mall">Mall</option>
 											<option value="Tempat Ibadah">Tempat Ibadah</option>
 											<option value="Sekolah">Sekolah</option>

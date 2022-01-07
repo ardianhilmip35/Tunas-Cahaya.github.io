@@ -140,29 +140,19 @@
                                             <label style="background-color: #1E3163; color: #fff; width: 160px; height: 30px; text-align: center; margin-left: 50px; margin-top: 10px;"><b>ID KARYAWAN</b></label>
                                             <input type="text" name="id_katalog" value="<?php echo $kd_kat?>" style="margin-left: 50px; width: 70%;" readonly/>
                                         </p>
-										<!-- <p>
-                                             <label style="background-color: #1E3163; color: #fff; width: 160px; height: 30px; text-align: center; margin-left: 50px; margin-top: 10px;"><b>ID KATALOG</b></label>
-                                             <input type="text" name="id_katalog" placeholder="ID Katalog" style="margin-left: 50px; width: 70%;"/>
-                                         </p> -->
                                          <p>
                                              <label style="background-color: #1E3163; color: #fff; width: 160px; height: 30px; text-align: center; margin-left: 50px; margin-top: 10px;"><b>NAMA KATALOG</b></label>
                                              <input type="text" name="nama_bangunan" placeholder="Nama Katalog" style="margin-left: 50px; width: 70%;"/>
                                          </p>
 										 <p>
                                             <label style="background-color: #1E3163; color: #fff; width: 160px; height: 30px; text-align: center; margin-left: 50px; margin-top: 10px;"><b>KATEGORI</b></label>	
-											<!-- <input type="text" name="Kategori" placeholder="Masjid, Mall, Perumahan, Sekolah" style="margin-left: 50px; width: 70%;"/>  -->
-											<select name="Kategori"  style="margin-left: 50px; width: 70%;">
+										<select name="Kategori"  style="margin-left: 50px; width: 70%;">
 											<option value="">--Pilih--</option>
 											<option value="Mall">Mall</option>
 											<option value="Tempat Ibadah">Tempat Ibadah</option>
 											<option value="Sekolah">Sekolah</option>
 										</select>
 										</p>
-                                         <!-- <p>
-                                            <label style="background-color: #1E3163; color: #fff; width: 160px; height: 30px; text-align: center; margin-left: 50px; margin-top: 10px;"><b>KATEGORI</b></label>	
-											<input type="text" name="Kategori" placeholder="Masjid, Mall, Perumahan, Sekolah" style="margin-left: 50px; width: 70%;"/> 
-											
-										</p> -->
                                          <p>
                                             <label style="background-color: #1E3163; color: #fff; width: 160px; height: 30px; text-align: center; margin-left: 50px; margin-top: 0px;"><b>ALAMAT</b></label>
                                             <input type="text" name="alamat" placeholder="Alamat" style="margin-left: 50px; width: 70%;"/>

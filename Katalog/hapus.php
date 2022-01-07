@@ -1,6 +1,5 @@
 <?php
     require ('../koneksi.php');
-    // $koneksi = new mysqli("localhost", "root", "", "tunascahaya");
  
         // require ('koneksi.php');
         $id = $_GET['id_katalog'];

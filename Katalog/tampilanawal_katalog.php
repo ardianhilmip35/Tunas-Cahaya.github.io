@@ -1,6 +1,5 @@
 <?php
 	// menghubungkan dengan koneksi database
-	// $koneksi = new mysqli("localhost", "root", "", "tunascahaya");
   require ('../koneksi.php');
   
 	session_start();
@@ -151,14 +150,6 @@
                             $result = mysqli_query($koneksi, "SELECT * FROM tb_katalog LIMIT $dataAwal, $batas");
 
                             if (mysqli_num_rows($result)) {
-                                  // while ($row = mysqli_fetch_array($result)) {
-                                    //   $userMail = $row['user_email'];
-                                      // $userName = $row['user_fullname'];
-                                    // if($sesLvl == 1) {
-                                    //     $dis = "";
-                                    // } else {
-                                    //     $dis = "disabled";
-                                    // }  
                                     if (isset($_POST['cari'])) {
                                       $key = $_POST['keyword'];
                                       $result = mysqli_query($koneksi, "SELECT * FROM tb_katalog WHERE nama_bangunan LIKE '%$key%' LIMIT $dataAwal, $batas");
@@ -166,13 +157,6 @@
                                       $result = mysqli_query($koneksi, "SELECT * FROM tb_katalog LIMIT $dataAwal, $batas");
                                     }
                                     while ($row = mysqli_fetch_array($result)) {
-                                        //$userID = $row['id_pemesanan'];
-                                        // $userName = $row['nama'];
-                                        // $userJabatan = $row['id_jabatan'];
-                                        // $userMail = $row['email'];
-                                        // $userPass = $row['password'];  
-                                        // $userTelp = $row['nomerhp'];
-                                        // $userAlamat = $row['alamat'];
                             ?>
                             <tr>
                                 <td align="center"><?php echo $row['id_katalog']?></td>

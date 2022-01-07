@@ -1,6 +1,5 @@
 <?php
-	// menghubungkan dengan koneksi database
-	// $koneksi = new mysqli("localhost", "root", "", "tunascahaya");
+	
     require ('../koneksi.php');
     
 	session_start();
@@ -49,36 +48,11 @@
           $result = mysqli_query($koneksi, $query);
         }
 
-                            // if (mysqli_num_rows($result)) {
-                            //       // while ($row = mysqli_fetch_array($result)) {
-                            //         //   $userMail = $row['user_email'];
-                            //           // $userName = $row['user_fullname'];
-                            //         // if($sesLvl == 1) {
-                            //         //     $dis = "";
-                            //         // } else {
-                            //         //     $dis = "disabled";
-                            //         // }  
-                            //         while ($row = mysqli_fetch_array($result)) {
-                            //             // $userID = $row['id_karyawan'];
-                            //             // $userName = $row['nama'];
-                            //             // $userJabatan = $row['id_jabatan'];
-                            //             // $userMail = $row['email'];
-                            //             // $userPass = $row['password'];  
-                            //             // $userTelp = $row['nomerhp'];
-                            //             // $userAlamat = $row['alamat'];
         ?>
         <?php
             $query = "SELECT * FROM tb_katalog";
             $result = mysqli_query($koneksi, $query);
             $no = 1;
-                                  // while ($row = mysqli_fetch_array($result)) {
-                                    //   $userMail = $row['user_email'];
-                                      // $userName = $row['user_fullname'];
-                                    // if($sesLvl == 1) {
-                                    //     $dis = "";
-                                    // } else {
-                                    //     $dis = "disabled";
-                                    // }  
                 while ($row = mysqli_fetch_array($result)) {
                     $IDKatalog = $row['id_katalog'];
                     $NamaBangunan = $row['nama_bangunan'];
@@ -103,7 +77,7 @@
         </table>
     </center>
     <script>
-                          window.print()
+        window.print()
     </script>
     
 </body>
