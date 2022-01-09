@@ -1,6 +1,5 @@
 <?php
 	// menghubungkan dengan koneksi database
-	// $koneksi = new mysqli("localhost", "root", "", "tunascahaya");
 	require ('../koneksi.php');
 	session_start();
     //mengecek user pada session
@@ -121,22 +120,8 @@
 						<div class="row" style="width: 50%; margin-left: 20%; ">
 							<div class="col-sm-6" style="padding-bottom:40px;">
 								<div class="card-style" style="background-color: #B2DFFB; height: 515px; width:310%">
-									<div class="card-body">
-										<?php
-										// $auto = mysqli_query($koneksi, "select max(id_karyawan) as max_code from tb_karyawan");
-										// $data = mysqli_fetch_array($auto);
-										// $code = $data['max_code'];
-										// $urutan = (int)substr($code, 1, 3);
-										// $urutan++;
-										// $huruf = "K";
-										// $kd_kat = $huruf . sprintf("%03s", $urutan);
-										?>
-										
+									<div class="card-body">										
                                         <form action="tambah_karyawan.php" method="POST">
-                                        <!-- <p>
-                                            <label style="background-color: #1E3163; color: #fff; width: 160px; height: 30px; text-align: center; margin-left: 50px; margin-top: 10px;"><b>ID KARYAWAN</b></label>
-                                            <input type="text" name="txt_id" value="<?php echo $kd_kat?>" style="margin-left: 50px; width: 70%;" readonly/>
-                                        </p> -->
                                         <p>
                                             <label style="background-color: #1E3163; color: #fff; width: 160px; height: 30px; text-align: center; margin-left: 50px; margin-top: 40px;"><b>NAMA</b></label>
                                             <input type="text" name="txt_nama" placeholder="Nama" style="margin-left: 50px; width: 70%;" required/>
@@ -146,20 +131,13 @@
                                             <select name="txt_id_jabatan" class="form-control" style="margin-left: 25%; width: 70%; margin-top: -3%;" required>
 												<option value="">- Pilih -</option>
 												<?php
-													// $datajabatan = [];
 													$sql_jabatan = mysqli_query($koneksi, "SELECT * FROM tb_jabatan");
 													while($nama_jabatan = mysqli_fetch_assoc($sql_jabatan)) {
-														// $datajabatan[] = $nama_jabatan;
-														echo '<option value="'.$nama_jabatan['id_jabatan'].'">'.$nama_jabatan['nama_jabatan'].'</option>';
+													echo '<option value="'.$nama_jabatan['id_jabatan'].'">'.$nama_jabatan['nama_jabatan'].'</option>';
 													}
 												?>
-												<!-- <?php 
-													foreach($datajabatan as $key => $value): ?>
-													<option value="<?php $value['id_jabatan'] ?>"><?php $value['nama_jabatan']; ?> </option>
-													<?php endforeach; ?> -->
 											</select>
-											<!-- <input type="text" name="txt_id_jabatan" placeholder="ID Jabatan" style="margin-left: 50px; width: 70%;" required/> -->
-                                        </p>
+											</p>
                                         <p>
                                             <label style="background-color: #1E3163; color: #fff; width: 160px; height: 30px; text-align: center; margin-left: 50px; margin-top: 10px;"><b>EMAIL</b></label>
                                             <input type="email" name="txt_email" placeholder="Email" style="margin-left: 50px; width: 70%;" required/>
@@ -174,8 +152,7 @@
                                         </p>
                                         <p>
                                             <label style="background-color: #1E3163; color: #fff; width: 160px; height: 30px; text-align: center; margin-left: 50px; margin-top: 10px;"><b>ALAMAT</b></label>
-											<!-- <textarea name="alamat" cols="90" rows="2" style="margin-left:50px; "></textarea> -->
-                                            <input type="text-area" name="txt_alamat" placeholder="Alamat" style="margin-left: 50px; width: 70%; height: 90px;" required/>
+											<input type="text-area" name="txt_alamat" placeholder="Alamat" style="margin-left: 50px; width: 70%; height: 90px;" required/>
                                         </p>
 
                                         <a href="#" style="text-decoration: none; color: black;">

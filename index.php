@@ -1,7 +1,6 @@
 <?php
   session_start();
   // koneksi ke database
-  // $koneksi = new mysqli("localhost", "root", "", "tunascahaya");
   require ('koneksi.php');
   
   if (isset($_COOKIE['id']) && isset($_COOKIE['key'])) {
@@ -46,7 +45,6 @@
             echo"<script>alert('Login Berhasil');</script>";
           }
             if($userVal==$email && $passVal==$pass) {
-              // header('Location: home.php?user_fullname='.urlencode($userName));
               $_SESSION['id_karyawan'] = $id;
               $_SESSION['nama'] = $userName;
               $_SESSION['id_jabatan'] = $level;

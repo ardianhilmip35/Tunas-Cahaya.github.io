@@ -1,6 +1,5 @@
 <?php
 	// menghubungkan dengan koneksi database
-	// $koneksi = new mysqli("localhost", "root", "", "tunascahaya");
   require ('../koneksi.php');
 
 	session_start();
@@ -126,12 +125,8 @@
               <div class="row">
                 <div class="col-11">
                   <div class="card" style="margin-left: 5%; margin-top: -5%">
-                    <!-- /.card-header -->
-                    <!-- <div class="card-body" > -->
                       <table class="table table-bordered" width="100" cellspacing="0" border="1">
                             <tr align="center" style="background-color: #1E3163; color: white;">
-                                <!-- <th width="50px;" height="40px;">Pilih</th> -->
-                                <!-- <th width="50px;" height="40px;">NO</th> -->
                                 <th width="50px;" height="40px;">No</th>
                                 <th width="500px;" height="40px;">Nama</th>
                                 <th width="450px;" height="40px;">Jabatan</th>
@@ -158,15 +153,7 @@
                             $result = mysqli_query($koneksi, "SELECT * FROM tb_karyawan LIMIT $dataAwal, $batas");
 
                             if (mysqli_num_rows($result)) {
-                                  // while ($row = mysqli_fetch_array($result)) {
-                                    //   $userMail = $row['user_email'];
-                                      // $userName = $row['user_fullname'];
-                                    // if($sesLvl == 1) {
-                                    //     $dis = "";
-                                    // } else {
-                                    //     $dis = "disabled";
-                                    // }  
-                                    if (isset($_POST['cari'])) {
+                                  if (isset($_POST['cari'])) {
                                       $key = $_POST['keyword'];
                                       $result = mysqli_query($koneksi, "SELECT * FROM tb_karyawan WHERE nama LIKE '%$key%' LIMIT $dataAwal, $batas");
                                     } else {
@@ -174,18 +161,8 @@
                                     }
                                       while ($row = mysqli_fetch_array($result)) {
                                           $userID = $row['id_karyawan'];
-                                          // $userName = $row['nama'];
-                                          // $userJabatan = $row['id_jabatan'];
-                                          // $userMail = $row['email'];
-                                          // $userPass = $row['password'];  
-                                          // $userTelp = $row['nomerhp'];
-                                          // $userAlamat = $row['alamat'];
-                            ?>
+                                          ?>
                             <tr>
-                                <!-- <td align="center">
-                                  <input class="form-check-input" type="checkbox" name="id[]" value='$row[id_karyawan]'/>
-                                </td> -->
-                                <!-- <td align="center"><?php echo $row['id_karyawan']?></td> -->
                                 <td><?php echo $no ?></td>
                                 <td><?php echo $row['nama']?></td>
                                   <?php 
@@ -246,15 +223,10 @@
                           
                         </ul>
                       </nav>
-                    <!-- </div> -->
-                  <!-- /.card -->
                     </div>
                   </div>
-                <!-- /.col -->
               </div>
-              <!-- /.row -->
             </div>
-          <!-- /.container-fluid -->
           </section>  
 		<!-- /. WRAPPER  -->
 

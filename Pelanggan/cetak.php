@@ -1,6 +1,4 @@
 <?php
-	// menghubungkan dengan koneksi database
-	// $koneksi = new mysqli("localhost", "root", "", "tunascahaya");
     require ('../koneksi.php');
     
 	session_start();
@@ -40,14 +38,7 @@
                                 $query = "SELECT * FROM tb_karyawan";
                                 $result = mysqli_query($koneksi, $query);
                                 $no = 1;
-                                  // while ($row = mysqli_fetch_array($result)) {
-                                    //   $userMail = $row['user_email'];
-                                      // $userName = $row['user_fullname'];
-                                    // if($sesLvl == 1) {
-                                    //     $dis = "";
-                                    // } else {
-                                    //     $dis = "disabled";
-                                    // }  
+
                                     while ($row = mysqli_fetch_array($result)) {
                                         $userID = $row['id_karyawan'];
                                         $userName = $row['nama'];
@@ -65,12 +56,6 @@
                                 <td align="center"><?php echo $userPass; ?></td>
                                 <td align="center"><?php echo $userTelp; ?></td>
                                 <td align="center"><?php echo $userAlamat; ?></td>
-                                  <!-- <td>
-                                  <a href="edit.php?id=<?php echo $row['id_karyawan']; ?>">
-                                        <button type="button" class="btn btn-success" value="Edit"><i class="fa fa-edit"></i> Edit</button></a> | 
-                                    <a href="delete.php?id=<?php echo $row['id']; ?>">
-                                        <button type="button" class="btn btn-danger" value="Hapus"><i class="fas fa-trash-alt"></i> Hapus</button></a>
-                                </td> -->
                             </tr>
                             <?php
                                 $no++; 

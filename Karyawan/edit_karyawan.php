@@ -1,6 +1,6 @@
 <?php
 	// menghubungkan dengan koneksi database
-	$koneksi = new mysqli("localhost", "root", "", "tunascahaya");
+    require ('../koneksi.php');
 	session_start();
     //mengecek user pada session
 	if(!isset($_SESSION['id_karyawan'])) {
@@ -155,15 +155,9 @@
 													} else {
                                                         echo '<option value="'.$nama_jabatan2['id_jabatan'].'">'.$nama_jabatan2['nama_jabatan'].'</option>';
                                                     }
-                                                }
-												?>
-												<!-- <?php 
-													foreach($datajabatan as $key => $value): ?>
-													<option value="<?php $value['id_jabatan'] ?>"><?php $value['nama_jabatan']; ?> </option>
-													<?php endforeach; ?> -->
+                                                }?>	
 											</select>
-                                             <!-- <input type="text" name="txt_id_jabatan" placeholder="ID Jabatan" style="margin-left: 50px; width: 70%;" value="<?php echo $userIDJabatan; ?>"/> -->
-                                         </p>
+                                             </p>
                                          <p>
                                              <label style="background-color: #1E3163; color: #fff; width: 160px; height: 30px; text-align: center; margin-left: 50px; margin-top: 10px;"><b>EMAIL</b></label>
                                              <input type="email" name="txt_email" placeholder="Email" style="margin-left: 50px; width: 70%;" value="<?php echo $userMail; ?>"/>

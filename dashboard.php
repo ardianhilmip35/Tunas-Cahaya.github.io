@@ -1,6 +1,4 @@
 <?php
-	// menghubungkan dengan koneksi database
-	// $koneksi = new mysqli("localhost", "root", "", "tunascahaya");
 	require ('koneksi.php');
 	
 	session_start();
