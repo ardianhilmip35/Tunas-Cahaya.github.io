@@ -163,7 +163,7 @@
                                 <td><?php echo $row['nama_bangunan']?></td>
                                 <td align="center"><?php echo $row['Kategori']?></td>
                                 <td align="center">
-                                  <img src="../img/<?php echo $row['gambar']?>" width="100">
+                                  <img src="../retrofit/img/<?php echo $row['gambar']?>" width="100">
                                 </td>
                                 <td><?php echo $row['deskripsi']?></td>
                                 <td align="center"><?php echo $row['alamat']?></td>

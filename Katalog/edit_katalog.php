@@ -1,6 +1,6 @@
 <?php
 	// menghubungkan dengan koneksi database
-	$koneksi = new mysqli("localhost", "root", "", "tunascahaya");
+    require ('../koneksi.php');
 	session_start();
     //mengecek user pada session
 	if(!isset($_SESSION['id_karyawan'])) {
@@ -23,7 +23,7 @@
             $lokasilokasifoto = $_FILES["foto"]["tmp_name"];
             // jika foto dirubah
             if(!empty($lokasilokasifoto)){
-                move_uploaded_file($lokasilokasifoto, "../img/$namafoto");
+                move_uploaded_file($lokasilokasifoto, "../retrofit/img/$namafoto");
                 $query = "UPDATE `tb_katalog` SET `nama_bangunan` ='$NamaBangunan', Kategori ='$Kategori', gambar ='$namafoto',   deskripsi ='$Deskripsi', alamat ='$Alamat' WHERE tb_katalog.id_katalog='$IDKatalog'";;
                 mysqli_query($koneksi, $query);
             } else {
@@ -164,7 +164,7 @@
                                          </p>
                                          <p>
                                             <label style="background-color: #1E3163; color: #fff; width: 160px; height: 30px; text-align: center; margin-left: 50px; margin-top: 10px;"><b>FOTO PRODUK</b></label>
-                                            <img src="../img/<?= $row['gambar'];?>" name="gambarLama" width="100" style="margin-left: 50px;">
+                                            <img src="../retrofit/img/<?= $row['gambar'];?>" name="gambarLama" width="100" style="margin-left: 50px;">
                                         <p>
                                          <p>
                                              <label style="background-color: #1E3163; color: #fff; width: 160px; height: 30px; text-align: center; margin-left: 50px; margin-top: 10px;"><b>GAMBAR</b></label>

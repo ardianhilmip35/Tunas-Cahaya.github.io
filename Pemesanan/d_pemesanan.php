@@ -124,13 +124,9 @@
                                              <label style="background-color: #1E3163; color: #fff; width: 160px; height: 30px; text-align: center; font-size: 14px; padding-top: 5px; margin-left: 50px; margin-top: 10px;"><b>ID PEMESANAN</b></label>
                                              <input type="text" name="txt_id" style="margin-left: 50px; width: 70%;" value="<?php echo $ID_pemesanan; ?>" readonly/>
                                          </p>
-                                         <?php 
-                                            $nama_pel  = mysqli_query($koneksi, "SELECT * FROM tb_pemesanan LEFT JOIN tb_user ON tb_pemesanan.id_pelanggan=tb_user.id_pelanggan WHERE id_pemesanan='$ID_pemesanan'");
-                                            $row = mysqli_fetch_array($nama_pel); 
-                                        ?>
                                          <p>
                                              <label style="background-color: #1E3163; color: #fff; width: 160px; height: 30px; text-align: center; font-size: 14px; padding-top: 5px; margin-left: 50px; margin-top: 10px;"><b>PELANGGAN</b></label>
-                                             <input type="text" name="txt_nama_pelanggan" style="margin-left: 50px; width: 70%;" value="<?php echo $row['nama'] ?>" readonly/>
+                                             <input type="text" name="txt_nama_pelanggan" style="margin-left: 50px; width: 70%;" value="<?php echo $Nama_pelanggan ?>" readonly/>
                                          </p>
                                          <?php 
                                             $katalog = mysqli_query($koneksi, "SELECT * FROM tb_pemesanan LEFT JOIN tb_katalog ON tb_pemesanan.id_katalog=tb_katalog.id_katalog WHERE id_pemesanan='$ID_pemesanan'");
@@ -152,7 +148,7 @@
                                                 <option value="6">6</option>
                                                 <option value="7">7</option>
                                              </select>
-                                                <input type="submit" name="submit" value="Proses"></a>
+                                                <input type="submit" type="button" name="submit" value="Proses"></a>
                                              
                                          </p>
                                          <a href="pemesanan.php" style="text-decoration: none; color: black;">

@@ -119,7 +119,7 @@
                             <?php
                             //Pagination
                             include '../koneksi.php';
-                            $batas = 5;
+                            $batas = 8;
                             $banyakData = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM tb_pemesanan"));
                             $banyakHal = ceil($banyakData / $batas); 
                             if (isset($_GET['halaman'])) {
@@ -152,7 +152,7 @@
                                       $pelanggan  = mysqli_query($koneksi, "SELECT * FROM tb_pemesanan LEFT JOIN tb_katalog ON tb_pemesanan.id_katalog=tb_katalog.id_katalog WHERE id_pemesanan='$userID'");
                                       $row = mysqli_fetch_array($pelanggan); 
                                   ?>
-                                <td align="center"><?php echo $row['nama_bangunan']?></td>
+                                <td align="center"><?php echo $row['Kategori']?></td>
                                 <td align="center"><?php echo $row['tgl_pemesanan'] ?></td>
                                 <td align="center">
                                     <a href="d_pemesanan.php?id_pemesanan=<?php echo $row['id_pemesanan']; ?>">

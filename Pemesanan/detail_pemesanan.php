@@ -16,6 +16,7 @@
             if (isset($_POST['tambah'])) {
             $jum = $_POST['cicilan'];
             $ID_pemesanan = $_POST['txt_id'];
+            $ID_pelanggan = $_POST['txt_idpelanggan'];
             $Nama_bangunan = $_POST['txt_nama_bangunan'];
             $Ttl_harga = $_POST['txt_total_harga'];
             $Cicilan = $_POST['cicilann'];
@@ -24,7 +25,7 @@
             $Status = $_POST['txt_status'];
                 for($i=0; $i<$jum; $i++) {
                     $query = "INSERT INTO tb_detailpemesanan VALUES 
-                    ('', '$ID_pemesanan', '$Nama_bangunan', '$Ttl_harga','$Cicilan[$i]', '$Hrg_Cicilan[$i]', '$Tgl_pembayaran[$i]', '', '$Status[$i]')";
+                    ('', '$ID_pemesanan', '$ID_pelanggan', '$Nama_bangunan', '$Ttl_harga','$Cicilan[$i]', '$Hrg_Cicilan[$i]', '$Tgl_pembayaran[$i]', '', '$Status[$i]')";
                     $result = mysqli_query($koneksi, $query);
                 } 
             header('Location: tampilanawal_pemesanan.php');
@@ -130,6 +131,10 @@
                                          <p>
                                              <label style="background-color: #1E3163; color: #fff; width: 160px; height: 30px; text-align: center; font-size: 14px; padding-top: 5px; margin-left: 50px; margin-top: 10px;"><b>ID PEMESANAN</b></label>
                                              <input type="text" name="txt_id" placeholder="ID Pemesanan" style="margin-left: 50px; width: 70%;"/>
+                                         </p>
+                                         <p>
+                                             <label style="background-color: #1E3163; color: #fff; width: 160px; height: 30px; text-align: center; font-size: 14px; padding-top: 5px; margin-left: 50px; margin-top: 10px;"><b>ID PELANGGAN</b></label>
+                                             <input type="text" name="txt_idpelanggan" placeholder="ID Pelanggan" style="margin-left: 50px; width: 70%;"/>
                                          </p>
                                          <p>
                                              <label style="background-color: #1E3163; color: #fff; width: 160px; height: 30px; text-align: center; font-size: 14px; padding-top: 5px; margin-left: 50px; margin-top: 10px;"><b>NAMA BANGUNAN</b></label>

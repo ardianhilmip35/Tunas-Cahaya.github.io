@@ -28,7 +28,7 @@
             $lokasilokasifoto = $_FILES["foto"]["tmp_name"];
             // jika foto dirubah
             if(!empty($lokasilokasifoto)){
-                move_uploaded_file($lokasilokasifoto, "../img/$namafoto");
+                move_uploaded_file($lokasilokasifoto, "../retrofit/img/$namafoto");
                 $query = "UPDATE `tb_detailpemesanan` SET `id_pemesanan`='$ID_pemesanan', `nama_bangunan`='$Nama_bangunan', `total_harga`='$Ttl_harga', `cicilan`='$Cicilan', `hrg_cicilan`='$Hrg_Cicilan',
                 `tanggal_pembayaran`='$Tgl_pembayaran', `bukti_pembayaran`='$namafoto',`status`='$Status' WHERE tb_detailpemesanan.id_detail=$ID_detail";
                 mysqli_query($koneksi, $query);
@@ -180,9 +180,7 @@
                                          
                                          <p>
                                             <label style="background-color: #1E3163; color: #fff; width: 160px; height: 55px; text-align: center; margin-left: 50px; margin-top: 10px;"><b>BUKTI PEMBAYARAN</b></label>
-                                            <img src="../img/<?= $row['bukti_pembayaran'];?>" name="gambarLama" width="100" style="margin-left: 50px;">
-                                            <a href="deletegambar.php?id_detail=<?php echo $row['id_detail']; ?>">
-                                        <button type="button" class="btn btn-danger" value="Hapus" onclick="return confirm ('Apakah Anda Yakin Untuk Menghapus Data?')"><i class="fas fa-trash-alt"></i></button></a>
+                                            <img src="../retrofit/img/<?= $row['bukti_pembayaran'];?>" name="gambarLama" width="100" style="margin-left: 50px;">
                                         </p>
                                          <p>
                                              <label style="background-color: #1E3163; color: #fff; width: 160px; height: 30px; text-align: center; font-size: 14px; padding-top: 5px; margin-left: 50px; margin-top: 10px;"><b>STATUS</b></label>

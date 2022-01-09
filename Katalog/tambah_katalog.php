@@ -17,7 +17,7 @@
         if (isset($_POST['tambah'])) {
 			$Gambar = $_FILES["gambar"]["name"];
 			$lokasilokasifoto = $_FILES["gambar"]["tmp_name"];
-			$folder = '../img/';
+			$folder = '../retrofit/img/';
 			move_uploaded_file($lokasilokasifoto[0], $folder.$Gambar[0]);
 
             $IDKatalog = $_POST['id_katalog'];

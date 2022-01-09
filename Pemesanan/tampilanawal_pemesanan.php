@@ -129,7 +129,8 @@
                     <!-- <div class="card-body" > -->
                       <table class="table table-bordered" width="100" cellspacing="0" border="1">
                             <tr align="center" style="background-color: #1E3163; color: white;">
-                                <th width="50px;" height="40px;">ID PEMESANAN</th>
+                                <th width="50px;" height="40px;">ID</th>
+                                <th width="50px;" height="40px;">NAMA PELANGGAN</th>
                                 <th width="500px;" height="40px;">NAMA BANGUNAN</th>
                                 <th width="500px;" height="40px;">TOTAL HARGA</th>
                                 <th width="500px;" height="40px;">CICILAN</th>
@@ -137,12 +138,12 @@
                                 <th width="500px;" height="40px;">TANGGAL PEMBAYARAN</th>
                                 <th width="500px;" height="40px;">BUKTI PEMBAYARAN</th>
                                 <th width="500px;" height="40px;">STATUS</th>
-                                <th width="11%;" height="40px;">AKSI</th>
+                                <th width="18%;" height="40px;">AKSI</th>
                             </tr>
                             <?php
                             //Pagination
                             include '../koneksi.php';
-                            $batas = 5;
+                            $batas = 3;
                             $banyakData = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM tb_detailpemesanan"));
                             $banyakHal = ceil($banyakData / $batas); 
                               if (isset($_GET['halaman'])) {
@@ -162,17 +163,25 @@
                                       $result = mysqli_query($koneksi, "SELECT * FROM tb_detailpemesanan LIMIT $dataAwal, $batas");
                                     }
                                     while ($row = mysqli_fetch_array($result)) {
+                                      $id_detail = $row['id_detail'];
                             ?>
                             <tr>
                                 <td align="center"><?php echo $row['id_pemesanan'] ?></td>
+                                <?php 
+                                    $nama_pel  = mysqli_query($koneksi, "SELECT * FROM tb_detailpemesanan LEFT JOIN tb_user ON tb_detailpemesanan.id_pelanggan=tb_user.id_pelanggan WHERE id_detail='$id_detail'");
+                                    $row = mysqli_fetch_array($nama_pel); 
+                                  ?>
+                                <td align="center"><?php echo $row['nama'] ?></td>
                                 <td><?php echo $row['nama_bangunan']?></td>
                                 <td align="center"><?php echo $row['total_harga'] ?></td>
                                 <td align="center"><?php echo $row['cicilan'] ?></td>
                                 <td><?php echo $row['hrg_cicilan'] ?></td>
                                 <td align="center"><?php echo $row['tanggal_pembayaran'] ?></td>
-                                <td><?php echo $row['bukti_pembayaran'] ?></td>
+                                <td align="center">
+                                  <img src="../retrofit/img/bukti/<?php echo $row['bukti_pembayaran']?>" width="100">
+                                </td>
                                 <td><?php echo $row['status'] ?></td>
-                                <td>
+                                <td align="center">
                                     <a href="edit_detailpemesanan.php?id_detail=<?php echo $row['id_detail']; ?>">
                                         <button type="button" class="btn btn-success" value="Edit"><i class="fa fa-edit"></i></button></a> | 
                                     <a href="delete.php?id_detail=<?php echo $row['id_detail']; ?>">
